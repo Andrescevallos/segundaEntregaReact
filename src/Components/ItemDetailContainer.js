@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import Funkos from "..Funkos.json/"
+import Funkos from "../Funkos.json"
 import ItemDetail from './ItemDetail'
 
 
