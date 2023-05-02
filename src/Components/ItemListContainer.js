@@ -7,9 +7,8 @@ const ItemListContainer = () => {
 
     const [array, setArray] = useState([])
 
-const params = useParams()
+const {marca} = useParams()
 
-console.log(params)
 
 
     useEffect(() =>{
@@ -20,13 +19,17 @@ console.log(params)
         })
     
         .then((res) =>{
-            setArray(res)
+            if(marca){
+                setArray(res.filter((item) => item.marca === marca))
+            } else{
+                setArray(res)
+            }
         })
         .catch((error)=>{
             console.log(error)
-        })
+        },[])
     
-    },[]) 
+    }) 
 
  
   return (

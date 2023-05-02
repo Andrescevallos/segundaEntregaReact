@@ -6,20 +6,20 @@ const Nadvar = () => {
     <div >
         <NavLink className='titulo' to="/"> <h1> Tienda </h1> </NavLink>
         <div className='nadvar'>
-            <NavLink to={"/marca/marvel"}> Marvel </NavLink>
-            <NavLink to={"/marca/harryPotter"}> Harry Potter </NavLink>
-            <NavLink to={"/marca/dragonBallZ"}> Dragon ball Z </NavLink>
-            <NavLink to={"/marca/disney"}> Disney </NavLink>
-            <NavLink to={"/marca/StarWars"}> Star Wars </NavLink>
-            <NavLink to={"/marca/theLordOfTheRing"}> The lord of the ring </NavLink>
+            <NavLink to={"/marca/Marvel"}> Marvel </NavLink>
+            <NavLink to={"/marca/Harry Potter"}> Harry Potter </NavLink>
+            <NavLink to={"/marca/Dragon ball Z"}> Dragon ball Z </NavLink>
+            <NavLink to={"/marca/Disney"}> Disney </NavLink>
+            <NavLink to={"/marca/Star Wars"}> Star Wars </NavLink>
+            <NavLink to={"/marca/The lord of the ring"}> The lord of the ring </NavLink>
             <NavLink to={"/marca/Deportes"}> Deportes </NavLink>
-            <NavLink to={"/marca/tombRaider"}> Tomb Raider </NavLink>
-            <NavLink to={"/marca/universal"}> Universal </NavLink>
-            <NavLink to={"/marca/dc"}> DC </NavLink>
-            <NavLink to={"/marca/pokemon"}> Pokemon </NavLink>
+            <NavLink to={"/marca/Tom Raider"}> Tomb Raider </NavLink>
+            <NavLink to={"/marca/Universal"}> Universal </NavLink>
+            <NavLink to={"/marca/DC"}> DC </NavLink>
+            <NavLink to={"/marca/Pokemon"}> Pokemon </NavLink>
         </div>
     </div>
   )
 }
 
-export default Nadvar
+export default Nadvar

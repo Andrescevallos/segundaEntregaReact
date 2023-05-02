@@ -2,10 +2,11 @@ import React from 'react'
 import { NavLink } from 'react-router-dom'
 
 const ItemList = ({Funkos}) => {
-  
 
+console.log({Funkos})
   return (
     <div className='carts'>
+
       {Funkos.map(Funkos =>{
         return(
         <div className='cart'>

@@ -23,7 +23,7 @@ a{
 
 .carts{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -34,13 +34,14 @@ a{
   border-radius: 15px;
   width: 240px;
   height: 400px;
-  margin: 5px 1px;
+  margin: 5px 3px;
 
 }
 
 .imgCart{
   width: 200px;
   height: 200px;
+  border-radius: 15px;
 
 
 }
@@ -62,5 +63,5 @@ a{
   margin-top: 15px;
   background-color: lightblue;
   border-radius: 15px;
-  
+
 }
