@@ -11,6 +11,7 @@ const {marca} = useParams()
 
 
 
+
     useEffect(() =>{
         const efect = new Promise((res, rej) =>{
             setTimeout(() => {
@@ -18,19 +19,19 @@ const {marca} = useParams()
             }, 2000);
         })
     
-        .then((res) =>{
-            if(marca){
-                setArray(res.filter((item) => item.marca === marca))
-            } else{
-                setArray(res)
-            }
+       efect.then((res) =>{
+           if(marca){
+            setArray(res.filter((item)=> item.marca === marca))
+           }else{
+            setArray(res)
+           }
         })
         .catch((error)=>{
             console.log(error)
-        },[])
+        })
     
-    }) 
-
+    },[marca]) 
+console.log(array)
  
   return (
     <ItemList Funkos={array}/>

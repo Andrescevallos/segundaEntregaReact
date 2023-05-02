@@ -1,29 +1,26 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
 
-const Item = (Funkos) => {
+const Item = (id, nombre, precio, marca, img) => {
 
 
-  return (
-    <div>
-      {Funkos.map(Funkos =>{
-        return(
-        <div className='cart'>
-          <div>
-              <img className='imgCart' src={Funkos.img} alt="..."/>
-              <div className='ordButton'>
-                  <div>
-                    <h5>{Funkos.nombre}</h5>
-                    <p>Precio:{Funkos.precio}</p>
-                    <p>Marca: {Funkos.marca}</p>
-                  </div>
+  return ( 
+  <div>
+    <div className='cart'>
+      <div>
+          <img className='imgCart' src={img} alt="..."/>
+          <div className='ordButton'>
+              <div>
+                <h5>{nombre}</h5>
+                <p>Precio:{precio}</p>
+                <p>Marca: {marca}</p>
               </div>
+              <NavLink to={"/detail/" + id} className='detailButton'>Detalle</NavLink>
           </div>
       </div>
-        )
-
-      })}
     </div>
-  )
-}
+  </div>
+
+)}
 
 export default Item
