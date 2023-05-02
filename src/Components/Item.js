@@ -15,7 +15,7 @@ const Item = (id, nombre, precio, marca, img) => {
                 <p>Precio:{precio}</p>
                 <p>Marca: {marca}</p>
               </div>
-              <NavLink to={"/detail/" + id} className='detailButton'>Detalle</NavLink>
+              <NavLink to={ '/detail/ ${id}' } className='detailButton'>Detalle</NavLink>
           </div>
       </div>
     </div>
