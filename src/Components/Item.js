@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Item = ({id, nombre, precio, marca, img}) => {
 
@@ -15,7 +15,7 @@ const Item = ({id, nombre, precio, marca, img}) => {
                 <p>Precio:{precio}</p>
                 <p>Marca: {marca}</p>
               </div>
-              <NavLink to={ `/detail/${id}` } className='detailButton'>Detalle</NavLink>
+              <Link to={ `/detail/${id}` } className='detailButton'>Detalle</Link>
           </div>
       </div>
     </div>

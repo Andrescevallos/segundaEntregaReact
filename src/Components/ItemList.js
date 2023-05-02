@@ -6,7 +6,7 @@ const ItemList = ({Funkos}) => {
 
 
   return (
-     <div>
+     <div className='carts'>
      {Funkos.map (funk => <Item key={funk.id} {...funk}  />)}
      </div>
   )}

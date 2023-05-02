@@ -9,9 +9,9 @@ const ItemDetailContainer = () => {
 
   const [array, setArray] = useState(null)
 
-  const {itemId} = useParams()
+  const {id} = useParams()
 
-  const buscar = (funkId) =>{
+  const buscar = (id) =>{
     new Promise((res) =>{
       setTimeout(() => {
           res(Funkos.find(funk=> funk.id === funkId))            
@@ -20,18 +20,15 @@ const ItemDetailContainer = () => {
     
   }
   
-  useEffect(() =>{
-
-      buscar(Funkos.id)
-          .then((res) =>{
-                  setArray(res)
-              }
-          )
-          .catch((error)=>{
-              console.log(error)
-          },[itemId])
-      
-      }) 
+  useEffect(() => {
+    buscar(id)
+      .then((res) => {
+        setArray(res);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+ }, [id]);
 
       
   return (
@@ -41,5 +38,4 @@ const ItemDetailContainer = () => {
       </div>
   )
 }
-
 export default ItemDetailContainer

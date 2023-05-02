@@ -1,22 +1,22 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Nadvar = () => {
   return (
     <div >
-        <NavLink className='titulo' to="/"> <h1> Tienda </h1> </NavLink>
+        <Link className='titulo' to="/"> <h1> Tienda </h1> </Link>
         <div className='nadvar'>
-            <NavLink to={"/marca/Marvel"}> Marvel </NavLink>
-            <NavLink to={"/marca/Harry Potter"}> Harry Potter </NavLink>
-            <NavLink to={"/marca/Dragon ball Z"}> Dragon ball Z </NavLink>
-            <NavLink to={"/marca/Disney"}> Disney </NavLink>
-            <NavLink to={"/marca/Star Wars"}> Star Wars </NavLink>
-            <NavLink to={"/marca/The lord of the ring"}> The lord of the ring </NavLink>
-            <NavLink to={"/marca/Deportes"}> Deportes </NavLink>
-            <NavLink to={"/marca/Tom Raider"}> Tomb Raider </NavLink>
-            <NavLink to={"/marca/Universal"}> Universal </NavLink>
-            <NavLink to={"/marca/DC"}> DC </NavLink>
-            <NavLink to={"/marca/Pokemon"}> Pokemon </NavLink>
+            <Link to={"/marca/Marvel"}> Marvel </Link>
+            <Link to={"/marca/Harry Potter"}> Harry Potter </Link>
+            <Link to={"/marca/Dragon ball Z"}> Dragon ball Z </Link>
+            <Link to={"/marca/Disney"}> Disney </Link>
+            <Link to={"/marca/Star Wars"}> Star Wars </Link>
+            <Link to={"/marca/The lord of the ring"}> The lord of the ring </Link>
+            <Link to={"/marca/Deportes"}> Deportes </Link>
+            <Link to={"/marca/Tom Raider"}> Tomb Raider </Link>
+            <Link to={"/marca/Universal"}> Universal </Link>
+            <Link to={"/marca/DC"}> DC </Link>
+            <Link to={"/marca/Pokemon"}> Pokemon </Link>
         </div>
     </div>
   )
