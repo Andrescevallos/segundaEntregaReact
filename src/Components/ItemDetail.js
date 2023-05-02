@@ -1,11 +1,9 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
 
-const Item = ({id, nombre, precio, marca, img}) => {
-
-
-  return ( 
-  <div>
+const ItemDetail = ({id, nombre, precio, marca, img}) => {
+  return (
+    <div>
+          <div>
     <div className='cart'>
       <div>
           <img className='imgCart' src={img} alt="..."/>
@@ -15,12 +13,12 @@ const Item = ({id, nombre, precio, marca, img}) => {
                 <p>Precio:{precio}</p>
                 <p>Marca: {marca}</p>
               </div>
-              <NavLink to={ `/detail/ ${id}` } className='detailButton'>Detalle</NavLink>
           </div>
       </div>
     </div>
   </div>
+    </div>
+  )
+}
 
-)}
-
-export default Item
+export default ItemDetail
