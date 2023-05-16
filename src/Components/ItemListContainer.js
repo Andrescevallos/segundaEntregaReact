@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import Funkos from "../Funkos.json"
+import Funkos from "../Funkos"
 import { useParams } from 'react-router-dom'
 
 const ItemListContainer = () => {

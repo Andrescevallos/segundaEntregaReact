@@ -1,34 +1,17 @@
-import './App.css';
-import { BrowserRouter, Routes, Route} from "react-router-dom"
-import Nadvar from './Components/Nadvar';
-import ItemListContainer from './Components/ItemListContainer';
-import ItemDetailContainer from './Components/ItemDetailContainer'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import ItemDetailContainer from "./Components/ItemDetailContainer";
+import ItemListContainer from "./Components/ItemListContainer";
+import Navbar from "./Components/Nadvar";
 
-
-
-
-function App() {
-
-
-  
+export default function App() {
   return (
     <BrowserRouter>
-
-      <Nadvar />
-
+      <Navbar />
       <Routes>
-
-        <Route path= '/' element= {<ItemListContainer />}/> 
-        <Route path= '/marca/:marca'element= {<ItemListContainer/>}/>
-        <Route path= '/detail/:id' element={<ItemDetailContainer />}/>
-
+        <Route path="/" element={<ItemListContainer />} />
+        <Route path="/marca/:marca" element={<ItemListContainer />} />
+        <Route path="/detail/:id" element={<ItemDetailContainer />} />
       </Routes>
-
     </BrowserRouter>
   );
 }
-
-export default App;
-
-
-

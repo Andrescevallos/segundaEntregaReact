@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  margin: 0 50px;
+  background: rgb(70, 110, 116);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.titulo{
+  text-align: center;
+  font-size: 50px;
+  color: rgb(0, 0, 0);
+}
+
+.nadvar{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+}
+
+.carts{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cart{
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  width: 240px;
+  height: 400px;
+  margin: 5px 3px;
+
+}
+
+.imgCart{
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+
+
+}
+
+.ordButton{
+  display: flex;
+  height: 180px;
+  justify-content: space-evenly;
+  border: solid 2.5px rgb(0, 0, 0);
+  border-radius: 15px;
+  background: black;
+  color: white;
+
+}
+
+.detailButton{
+  width: 80px;
+  height: 50px;
+  margin-top: 15px;
+  background-color: lightblue;
+  border-radius: 15px;
+  margin-top: 35px;
+  text-align: center;
+  padding-top: 10px;
+
 }

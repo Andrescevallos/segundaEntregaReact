@@ -1,41 +1,47 @@
-import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import Funkos from "../Funkos.json"
-import ItemDetail from './ItemDetail'
-
-
+import { useEffect, useState } from "react";
+import { Spinner } from "react-bootstrap";
+import { useParams } from "react-router-dom";
+import funkos from "../Funkos";
+import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
+  const [product, setProduct] = useState();
+  const [isLoading, setIsLoading] = useState(true);
+  const { id } = useParams();
 
-  const [array, setArray] = useState(null)
-
-  const {id} = useParams()
-
-  const buscar = (id) =>{
-    new Promise((res) =>{
-      setTimeout(() => {
-          res(Funkos.find(funk=> funk.id === funkId))            
-      }, 500);
-  })
-    
-  }
-  
   useEffect(() => {
-    buscar(id)
-      .then((res) => {
-        setArray(res);
-      })
-      .catch((error) => {
-        console.log(error);
+    setIsLoading(true);
+
+    function getProducts() {
+      return new Promise((resolve) => {
+        setTimeout(() => {
+          resolve(funkos);
+        }, 500);
       });
- }, [id]);
+    }
 
-      
+    getProducts(id)
+      .then((product) => {
+        setProduct(product.find((x) => x.id === id));
+      })
+      .finally(() => {
+        setIsLoading(false);
+      });
+  }, [id]);
+
   return (
-      <div>
-        <ItemDetail {...array}  />
+    <div>
+      {isLoading ? (
+        <div className="d-flex justify-content-center">
+          <Spinner animation="grow" className="m-5" />
+        </div>
+      ) : (
+        <>
+          <ItemDetail {...product} />
+        </>
+      )}
+    </div>
+  );
+};
 
-      </div>
-  )
-}
-export default ItemDetailContainer
+export default ItemDetailContainer;
