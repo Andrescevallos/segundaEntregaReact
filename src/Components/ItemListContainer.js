@@ -1,41 +1,40 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import Funkos from "../Funkos"
 import { useParams } from 'react-router-dom'
+import { getProductos } from "../Utils";
+
+
 
 const ItemListContainer = () => {
 
-    const [array, setArray] = useState([])
+const [array, setArray] = useState([])
 
 const {marca} = useParams()
 
 
-
-
     useEffect(() =>{
-        const efect = new Promise((res, rej) =>{
-            setTimeout(() => {
-                res(Funkos)            
-            }, 2000);
-        })
-    
-       efect.then((res) =>{
-           if(marca){
-            setArray(res.filter((item)=> item.marca === marca))
-           }else{
-            setArray(res)
-           }
-        })
-        .catch((error)=>{
-            console.log(error)
-        })
+        getProductos()
+        .then((res) =>{
+            if(marca){
+                setArray(res.filter((item)=> item.marca === marca))
+               }else{
+                setArray(res)
+               }
+    })
+
     
     },[marca]) 
-console.log(array)
+
+    // console.table(array)
+    
  
   return (
-    <ItemList Funkos={array}/>
+    <div className="main">    
+      <ItemList  Funkos={array}/>
+  </div>
   )
 }
 
 export default ItemListContainer
+
+

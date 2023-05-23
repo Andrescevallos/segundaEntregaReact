@@ -1,24 +1,28 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Dropdown from 'react-bootstrap/Dropdown';
+import DropdownButton from 'react-bootstrap/DropdownButton';
+import CartWidget from './CartWidget';
+
+
 
 const Nadvar = () => {
   return (
-    <div >
-      <Link className='titulo' to={"/"} > Tienda Funkos </Link>
+    <div className='header' >
+
+
+
+      <Link className='titulo' to={"/"} > FunCompras </Link>
       <div className='nadvar'>
-
-        <Link to={"/marca/Marvel"}>Marvel</Link>
-        <Link to={"/marca/Harry Potter"}>Harry Potter</Link>
-        <Link to={"/marca/Disney"}>Disney</Link>
-        <Link to={"/marca/Star Wars"}>Star Wars</Link>
-        <Link to={"/marca/The lord of the ring"}>The lord of the ring</Link>
-        <Link to={"/marca/Deportes"}>Deportes</Link>
-        <Link to={"/marca/Tom Raider"}>Tom Raider</Link>
-        <Link to={"/marca/Universal"}>Universal</Link>
-        <Link to={"/marca/DC"}>DC</Link>
-        <Link to={"/marca/Pokemon"}>Pokemon</Link>
-
+      <DropdownButton  id="drop" title="Marcas">
+              <Dropdown.Item><Link to={"/marca/Marvel"}>Marvel</Link></Dropdown.Item>
+              <Dropdown.Item><Link to={"/marca/Dragon ball Z"}>Dragon ball Z</Link></Dropdown.Item>
+              <Dropdown.Item><Link to={"/marca/Games"}>Games</Link></Dropdown.Item>
+              <Dropdown.Item><Link to={"/marca/DC"}>DC</Link></Dropdown.Item>
+              <Dropdown.Item><Link to={"/marca/Pokemon"}>Pokemon</Link></Dropdown.Item>
+    </DropdownButton>
       </div>
+      <CartWidget className ="icon" />
     </div>
   )
 }

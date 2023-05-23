@@ -1,21 +1,49 @@
-body{
-  margin: 0 50px;
-  background: rgb(70, 110, 116);
+#root{
+  background: black;
+  height: 100%;
+}
+
+.header{
+  background: rgb(79, 197, 243);
+  display: flex;
+  height: 150px;
+  justify-content: space-evenly;
+  border: solid 2px black;
+  border-radius: 10px;
+  padding-top: 10px;
 }
 
 .titulo{
   text-align: center;
-  font-size: 50px;
+  font-size: 75px;
   color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+#drop{
+  background-color: rgb(0, 0, 0);
+  border: white solid 2px;
+  width: 150px;
+}
+
+.iconCarrito{
+  color: black;
+  font-size: 40px;
+  padding-top: 50px;
 }
 
 .nadvar{
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  padding-top: 50px;
 }
 
-a{
+.main{
+  border: solid 2px black;
+  background: rgb(79, 197, 243);
+  border-radius: 10px;
+}
+
+a, Link{
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 20px;
@@ -31,9 +59,10 @@ a{
   display: flex;
   justify-content: center;
   background-color: white;
+  border: solid 2px black;
   border-radius: 15px;
   width: 240px;
-  height: 400px;
+  height: 370px;
   margin: 5px 3px;
 
 }
@@ -48,7 +77,9 @@ a{
 
 .ordButton{
   display: flex;
-  height: 180px;
+  text-align: center;
+  width: 236px;
+  height: 150px;
   justify-content: space-evenly;
   border: solid 2.5px rgb(0, 0, 0);
   border-radius: 15px;
@@ -57,14 +88,215 @@ a{
 
 }
 
-.detailButton{
-  width: 80px;
-  height: 50px;
-  margin-top: 15px;
-  background-color: lightblue;
-  border-radius: 15px;
-  margin-top: 35px;
-  text-align: center;
-  padding-top: 10px;
+.detailButton{  background: rgb(255, 255, 255);
+  color: rgb(255, 2, 2);
+  border-radius: 5px;
 
+}
+
+.detail{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  background: rgb(0, 0, 0);
+  border-radius: 15px;
+  border: solid 2px rgb(0, 0, 0);
+  margin-top: 25px;
+}
+
+.divImg{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 500px;
+  background: white;
+  border-radius: 12px;
+}
+
+.divDesc{
+  width: 600px;
+  background:  rgb(79, 197, 243);
+  border: solid 2px rgb(0, 0, 0);
+  border-radius: 12px;
+}
+
+.imgDetail{
+  width: 450px;
+  height: 450px;
+  border-radius: 12px;
+
+}
+
+.textDetail{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.desc{
+  margin-top: 5px;
+  text-align: center;
+  padding: 0 30px;
+}
+
+.textDetail p{
+  padding-top: 25px;
+  font-size: 25px;
+
+}
+
+.btnTerm{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
+
+
+.sumarRestar{
+  width: 110px;
+  height: 50px;
+  background: black;
+  color: white;
+  border: white solid 2px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+}
+
+.conta{
+  font-size: 35px;
+  padding-bottom: 10px;
+
+}
+
+
+
+.finalizar{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.btnFin{
+  width: 150px;
+  height: 50px;
+  background: black;
+  color: white;
+  border: white solid 2px;
+  border-radius: 10px;
+}
+
+.linkFin{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.linkFin a{
+  text-decoration: none ;
+  border: solid white 2px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+.carritoCart{
+  height: 100%;
+  background: white;
+  border-radius: 15px;
+}
+
+.carritoOrd{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-top: 15px ;
+}
+
+.imgFunkosCarrito{
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
+  border: solid black 2px;
+}
+
+.textCarrito{
+  font-size: 35px;
+}
+
+.divCarrito{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.divCarrito p{
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.cartW{
+  display: flex;
+}
+
+.textCartW{
+  margin-top: 50px;
+  margin-left: 15px;
+  font-size: 25px;
+}
+
+.divClear{
+  display: flex;
+  justify-content: end;
+}
+
+.btnClear{
+  margin-left: 25px;
+  background-color:rgb(79, 197, 243) ;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.textClear{
+  font-size: 25px;
+  color: white;
+  text-decoration: underline;
+  padding: 0 25px;
+}
+
+.empty{
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+}
+
+.empty span{
+  font-size: 30px;
+  color:rgb(79, 197, 243) ;
+}
+
+.ordInput{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.ordInput input{
+  width: 350px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.ordInput label{
+  color: white;
+}
+
+.btnFinalizar{
+  border: white solid 2px;
+  background: rgb(79, 197, 243);
+  padding: 15px;
+  border-radius: 15px;
 }

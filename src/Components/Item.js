@@ -14,8 +14,9 @@ const Item = ({id, nombre, precio, marca, img}) => {
                 <h5>{nombre}</h5>
                 <p>Precio:{precio}</p>
                 <p>Marca: {marca}</p>
+                <Link to={ `/detail/${id}` } className='detailButton'>Detalle</Link>
               </div>
-              <Link to={ `/detail/${id}` } className='detailButton'>Detalle</Link>
+              
           </div>
       </div>
     </div>
