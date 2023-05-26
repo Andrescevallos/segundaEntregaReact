@@ -9,7 +9,7 @@ import Confirmar from "./Components/Confirmar";
 
 export default function App() {
   return (
-    <div className="container">    
+    <div className="container" id="flecha">    
       <BrowserRouter>
         <CustomProvider >
           <Navbar />
@@ -18,7 +18,7 @@ export default function App() {
             <Route path="/marca/:marca" element={<ItemListContainer />} />
             <Route path="/detail/:id" element={<ItemDetailContainer />} />
             <Route path="/CarritoList" element={<CarritoList />} />
-            {/* <Route path="/Confirmar" element={<Confirmar />} /> */}
+            <Route path="/Confirmar" element={<Confirmar />} />
           </Routes>            
           <Footer />      
         </CustomProvider>

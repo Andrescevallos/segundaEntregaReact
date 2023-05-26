@@ -27,27 +27,6 @@ export const getProductos =  () =>{
         
     }
 
-export const imgNec = () =>{
-
-        const  getImg = collection(db, "imgDeco")
-
-        return  getDocs(getImg) 
-        .then((res) =>{
-
-            const array = res.docs
-
-            array.map((documento)=>{
-                console.log(documento.data())
-            })
-   
-        
-    })
-        .catch((error) =>{
-            console.log("Hubo un error pidiendo los productos")
-        })
-
-    }
- 
 
 
 

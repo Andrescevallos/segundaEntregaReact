@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { contexto } from './CustomProvider'
-
+import { FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
 
 const Carrito = (funko) => {
 
@@ -31,7 +32,7 @@ const Carrito = (funko) => {
             <p>Total {funko.nombre}</p>
             <span className='textCarrito'> {funko.cantidad * funko.precio}</span>
           </div>     
-          <button onClick={remove} >Eliminar</button>
+          <button className='eliminar' onClick={remove} ><FontAwesomeIcon className='iconTrash' icon={faTrash} beat /></button>
       </div>
       <hr></hr>
     </div>

@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
 import { createContext } from "react";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 export const contexto = createContext()
 const { Provider } = contexto
+
 
 
 const CustomProvider = ({children}) => {
@@ -19,14 +24,44 @@ const CustomProvider = ({children}) => {
             nuevo = [...carrito, {...item , cantidad: cantidad}]    
         } 
         setCarrito(nuevo)
+        toast('Funko Añadido al Carrito!', {
+            position: "top-right",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
 
     const clear = () => { 
-        setCarrito ([])  
+        setCarrito ([]) 
+        toast('No hay productos en el carrito :(', {
+            position: "top-right",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            }); 
     }
 
     const eliminarDelCarrito = (id) =>{
         setCarrito(carrito.filter(funko => funko.id !== id))  
+        toast('Funko eliminado!', {
+            position: "top-right",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+            });
     }
  
     const precioFinal = () =>{
@@ -36,6 +71,7 @@ const CustomProvider = ({children}) => {
     const cantTotal = () =>{ 
         return carrito.reduce((a, valor) => a + valor.cantidad, 0)
     } 
+
 
    
         
@@ -52,6 +88,7 @@ const CustomProvider = ({children}) => {
 }
     } >
         {children}
+        <ToastContainer />
     </Provider>
   )
 }
